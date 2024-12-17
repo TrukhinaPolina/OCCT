@@ -1,0 +1,1 @@
+Get-Process | Where-Object { $_.Id -gt 40 } | Sort-Object -Property StartTime | Select-Object Id, Name, StartTime, Handles | Out-File -FilePath "$HOME\Desktop\task6.txt"

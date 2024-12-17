@@ -1,0 +1,1 @@
+Get-ChildItem C:\Windows\* -Include SY*  | Sort-Object LastWriteTime | Select-Object  Length, LastWriteTime, Name | tee 3.txt

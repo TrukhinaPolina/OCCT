@@ -1,0 +1,1 @@
+Get-ChildItem -Path C:\Windows\* -Force | Where-Object { $_.Name -like 'SY*' } | Sort-Object -Property LastWriteTime | Select-Object Name, LastWriteTime

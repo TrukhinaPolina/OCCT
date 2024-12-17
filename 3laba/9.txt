@@ -1,0 +1,10 @@
+
+Get-WmiObject win32_processor | tee 9.txt
+
+
+Caption           : AMD64 Family 23 Model 1 Stepping 1
+DeviceID          : CPU0
+Manufacturer      : AuthenticAMD
+MaxClockSpeed     : 3200
+Name              : AMD Ryzen 5 1600 Six-Core Processor
+SocketDesignation : AM4

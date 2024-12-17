@@ -1,0 +1,22 @@
+$dllFiles = Get-ChildItem -Path C:\Windows\System32 -Filter *.dll
+$largestFiles = $dllFiles | Sort-Object -Property Length -Descending | Select-Object -First 3
+$smallestFiles = $dllFiles | Sort-Object -Property Length | Select-Object -First 3
+
+"Min weight files:"
+$smallestFiles
+
+"Max wight files:"
+$largestFiles
+Min weight files:
+Каталог: C:\Windows\System32
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        07.12.2019     12:08           2048 winrsmgr.dll
+-a----        07.12.2019     12:09           2560 neth.dll
+-a----        07.12.2019     12:08           2560 iologmsg.dll
+Max wight files:
+-a----        04.09.2024     10:43      105410432 amd_comgr.dll
+-a----        04.12.2023      5:46       32610352 WindowsCodecsRaw.dll
+-a----        11.12.2024     18:17       26269696 edgehtml.dll

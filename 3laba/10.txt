@@ -1,0 +1,20 @@
+
+$dirTimes = @()
+$psTimes = @()
+for ($i = 0; $i -lt 10; $i++) {
+    $dirTimes += (Measure-Command { dir }).TotalMilliseconds
+    $psTimes += (Measure-Command { ps }).TotalMilliseconds
+}
+$maxDirTime = ($dirTimes | Measure-Object -Maximum).Maximum
+$minDirTime = ($dirTimes | Measure-Object -Minimum).Minimum
+$avgDirTime = ($dirTimes | Measure-Object -Average).Average
+$maxPsTime = ($psTimes | Measure-Object -Maximum).Maximum
+$minPsTime = ($psTimes | Measure-Object -Minimum).Minimum
+$avgPsTime = ($psTimes | Measure-Object -Average).Average
+
+"[DIR]: MIN: $maxDirTime ms, MIN: $minDirTime ms, AVG: $avgDirTime ms"
+"[PS]: MIN: $maxPsTime ms, MIN: $minPsTime ms, AVG: $avgPsTime ms"
+
+[DIR]: MIN: 10.3586 ms, MIN: 0.7711 ms, AVG: 1.77037 ms
+[PS]: MIN: 14.2211 ms, MIN: 4.715 ms, AVG: 6.23444 ms
+PS C:\occt\2laba>
